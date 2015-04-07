@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokoban", "Sokoban\Sokoban.csproj", "{924FA8CF-B348-442E-9244-0AD12FDEC47F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A238FB65-C7AB-42D0-A93E-87313C5AC39E} = {A238FB65-C7AB-42D0-A93E-87313C5AC39E}
@@ -13,6 +15,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokoban.DataAccessLayer", "Sokoban.DataAccessLayer\Sokoban.DataAccessLayer.csproj", "{31EA411E-62EA-44EE-B837-0B3F3A5CC57B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokoban.DataTypes", "Sokoban.DataTypes\Sokoban.DataTypes.csproj", "{5805DD13-54D8-4786-A658-F2649174DDCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{8CD634BE-E8FC-42D8-8C50-1439327D2F49}"
+	ProjectSection(SolutionItems) = preProject
+		References\Cecil.FlowAnalysis.dll = References\Cecil.FlowAnalysis.dll
+		References\Db4objects.Db4o.CS.dll = References\Db4objects.Db4o.CS.dll
+		References\Db4objects.Db4o.dll = References\Db4objects.Db4o.dll
+		References\Db4objects.Db4o.Linq.dll = References\Db4objects.Db4o.Linq.dll
+		References\Mono.Cecil.dll = References\Mono.Cecil.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
