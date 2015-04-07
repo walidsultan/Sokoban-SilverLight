@@ -1,0 +1,25 @@
+<SavedGame>
+  <File>C:\Program Files\Sokoban 2.0\Levels\Soloban.slc</File>
+  <Player>walid</Player>
+  <Nr>7</Nr>
+  <History></History>
+  <Level Id="The run" Width="19" Height="17">
+    <L>#################</L>
+    <L>#   #  #     #  #</L>
+    <L>#@     #     #  #</L>
+    <L>###$#  ## #  #  ###</L>
+    <L>#   # ### #    #  #</L>
+    <L># ##      #### #  #</L>
+    <L>#  #   ##  #      #</L>
+    <L>## ######  #   # ##</L>
+    <L>#  ##   #  ####   #</L>
+    <L># ##    ####  #   #</L>
+    <L># ##  ##   #  # ###</L>
+    <L>#  .#      #      #</L>
+    <L>## ## ### ### #   #</L>
+    <L>#      #  ### #####</L>
+    <L>#  #   #          #</L>
+    <L>#  #####  #####   #</L>
+    <L>####   ####   #####</L>
+  </Level>
+</SavedGame>

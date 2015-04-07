@@ -1,0 +1,12 @@
+<OutOfBrowserSettings ShortName="Sokoban" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>Silverlight Sokoban Application on your desktop; at home, at work or on the go.</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Sokoban Application" Height="600" Width="800" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="16,16">Images/sokoban 16.png</Icon>
+    <Icon Size="32,32">Images/sokoban 32.png</Icon>
+    <Icon Size="48,48">Images/sokoban 42.png</Icon>
+    <Icon Size="128,128">Images/sokoban 128.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

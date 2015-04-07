@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A238FB65-C7AB-42D0-A93E-87313C5AC39E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sokoban.Web</RootNamespace>
+    <AssemblyName>Sokoban.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplicationList>{924FA8CF-B348-442E-9244-0AD12FDEC47F}|..\Sokoban\Sokoban.csproj|ClientBin|False</SilverlightApplicationList>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>C:\Users\Walid\Desktop\Sokoban.Web.zip</DesktopBuildPackageLocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\Sokoban.xap" />
+    <Content Include="Index.aspx" />
+    <None Include="Levels\MicroCosmos\level1.xml" />
+    <None Include="Levels\MicroCosmos\level2.xml" />
+    <Content Include="Levels\MicroCosmos\level10.xml" />
+    <Content Include="Levels\MicroCosmos\level11.xml" />
+    <Content Include="Levels\MicroCosmos\level12.xml" />
+    <Content Include="Levels\MicroCosmos\level16.xml" />
+    <Content Include="Levels\MicroCosmos\level17.xml" />
+    <Content Include="Levels\MicroCosmos\level18.xml" />
+    <Content Include="Levels\MicroCosmos\level19.xml" />
+    <Content Include="Levels\MicroCosmos\level20.xml" />
+    <Content Include="Levels\MicroCosmos\level21.xml" />
+    <Content Include="Levels\MicroCosmos\level22.xml" />
+    <Content Include="Levels\MicroCosmos\level23.xml" />
+    <Content Include="Levels\MicroCosmos\level24.xml" />
+    <Content Include="Levels\MicroCosmos\level25.xml" />
+    <Content Include="Levels\MicroCosmos\level27.xml" />
+    <Content Include="Levels\MicroCosmos\level28.xml" />
+    <Content Include="Levels\MicroCosmos\level29.xml" />
+    <Content Include="Levels\MicroCosmos\level3.xml" />
+    <Content Include="Levels\MicroCosmos\level30.xml" />
+    <Content Include="Levels\MicroCosmos\level31.xml" />
+    <Content Include="Levels\MicroCosmos\level32.xml" />
+    <Content Include="Levels\MicroCosmos\level33.xml" />
+    <Content Include="Levels\MicroCosmos\level34.xml" />
+    <Content Include="Levels\MicroCosmos\level35.xml" />
+    <Content Include="Levels\MicroCosmos\level36.xml" />
+    <Content Include="Levels\MicroCosmos\level37.xml" />
+    <Content Include="Levels\MicroCosmos\level38.xml" />
+    <Content Include="Levels\MicroCosmos\level39.xml" />
+    <Content Include="Levels\MicroCosmos\level4.xml" />
+    <Content Include="Levels\MicroCosmos\level40.xml" />
+    <Content Include="Levels\MicroCosmos\level6.xml" />
+    <Content Include="Levels\MicroCosmos\level7.xml" />
+    <Content Include="Levels\MicroCosmos\level8.xml" />
+    <Content Include="Levels\MicroCosmos\level9.xml" />
+    <Content Include="Levels\SokoHard\sokohard1.xml" />
+    <Content Include="Levels\SokoHard\sokohard2.xml" />
+    <Content Include="Levels\SokoHard\sokohard3.xml" />
+    <Content Include="Levels\SokoHard\sokohard4.xml" />
+    <Content Include="Levels\SokoHard\sokohard5.xml" />
+    <Content Include="Levels\SokoHard\sokohard6.xml" />
+    <Content Include="Levels\SokoHard\sokohard7.xml" />
+    <Content Include="Levels\SokoHard\sokohard8.xml" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="Scripts\SilverlightOnError.js" />
+    <Content Include="Styles\Style.css" />
+    <Content Include="Upload.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SokobanService.cs" />
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Levels\microban\microban 100.gam" />
+    <None Include="Levels\microban\microban 146.gam" />
+    <None Include="Levels\microban\microban 147.gam" />
+    <None Include="Levels\microban\microban 152.gam" />
+    <None Include="Levels\microban\microban 154.gam" />
+    <None Include="Levels\microban\microban 3.gam" />
+    <None Include="Levels\microban\microban 60.gam" />
+    <None Include="Levels\microban\microban 61.gam" />
+    <None Include="Levels\microban\microban 62.gam" />
+    <None Include="Levels\microban\microban 64.gam" />
+    <None Include="Levels\microban\microban 65.gam" />
+    <None Include="Levels\microban\microban 66.gam" />
+    <None Include="Levels\microban\microban 70.gam" />
+    <None Include="Levels\microban\microban 71.gam" />
+    <None Include="Levels\microban\microban 72.gam" />
+    <None Include="Levels\microban\microban 74.gam" />
+    <None Include="Levels\microban\microban 75.gam" />
+    <None Include="Levels\microban\microban 76.gam" />
+    <None Include="Levels\microban\microban 77.gam" />
+    <None Include="Levels\microban\microban 78.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 16.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 17.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 18.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 19.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 2.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 20.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 21.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 22.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 23.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 24.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 25.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 26.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 27.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 28.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 29.gam">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Levels\nabokocosmos\naboko cosom 3.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 30.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 31.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 32.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 33.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 34.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 35.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 36.gam">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Levels\nabokocosmos\naboko cosom 37.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 38.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 39.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 4.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 40.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 5.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 6.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 7.gam" />
+    <None Include="Levels\nabokocosmos\naboko cosom 8.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 10.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 11.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 12.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 13.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 14.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 15.gam" />
+    <None Include="Levels\nabokocosmos\naoboko cosmos 9.gam" />
+    <None Include="Levels\Scoria\scoria 10.gam" />
+    <None Include="Levels\Scoria\scoria 13.gam" />
+    <None Include="Levels\Scoria\scoria 16.gam" />
+    <None Include="Levels\Scoria\scoria 17.gam" />
+    <None Include="Levels\Scoria\scoria 18.gam" />
+    <None Include="Levels\Scoria\scoria 19.gam" />
+    <None Include="Levels\Scoria\scoria 20.gam" />
+    <None Include="Levels\Scoria\scoria 4.gam" />
+    <None Include="Levels\Scoria\scoria 6.gam" />
+    <None Include="Levels\SokoGen\sokogen71.gam" />
+    <None Include="Levels\SokoGen\sokogen72.gam" />
+    <None Include="Levels\SokoGen\sokogen73.gam" />
+    <None Include="Levels\SokoGen\sokogen74.gam" />
+    <None Include="Levels\SokoGen\sokogen75.gam" />
+    <None Include="Levels\SokoGen\sokogen77.gam" />
+    <None Include="Levels\SokoGen\sokogen78.gam" />
+    <None Include="Levels\SoloBan\scattered.gam" />
+    <None Include="Levels\SoloBan\solo ban 3.gam" />
+    <None Include="Levels\SoloBan\solo ban 4gam.gam" />
+    <None Include="Levels\SoloBan\solo ban 5.gam" />
+    <None Include="Levels\SoloBan\solo ban.gam" />
+    <None Include="Levels\SoloBan\The Run.gam" />
+    <None Include="Levels\SoloBan\The Spiral.gam" />
+    <None Include="Levels\SoloBan\which way.gam" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sokoban.DataAccessLayer\Sokoban.DataAccessLayer.csproj">
+      <Project>{31EA411E-62EA-44EE-B837-0B3F3A5CC57B}</Project>
+      <Name>Sokoban.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sokoban.DataTypes\Sokoban.DataTypes.csproj">
+      <Project>{5805DD13-54D8-4786-A658-F2649174DDCC}</Project>
+      <Name>Sokoban.DataTypes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1805</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Sokoban</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

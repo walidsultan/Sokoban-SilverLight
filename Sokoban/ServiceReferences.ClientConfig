@@ -1,0 +1,24 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_ISolver" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_ISolver1" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:3053/Solver.svc" binding="basicHttpBinding"
+        bindingConfiguration="BasicHttpBinding_ISolver" contract="WcfSolvingService.ISolver"
+        name="BasicHttpBinding_ISolver" />
+      <endpoint address="http://walid/WcfSokobanSolvingService/Solver.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISolver1"
+        contract="WcfSokobanSolver.ISolver" name="BasicHttpBinding_ISolver1" />
+    </client>
+  </system.serviceModel>
+</configuration>

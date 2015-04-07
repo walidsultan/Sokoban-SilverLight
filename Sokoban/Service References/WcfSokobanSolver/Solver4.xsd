@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Sokoban.SokobanSolvingLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sokoban.SokobanSolvingLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://walid/WcfSokobanSolvingService/Solver.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Sokoban.DataTypes" />
+  <xs:import schemaLocation="http://walid/WcfSokobanSolvingService/Solver.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="SolutionInfoEventArgs">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:EventArgs">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Sokoban.DataTypes" name="SolutionPath" nillable="true" type="q2:Path" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SolutionInfoEventArgs" nillable="true" type="tns:SolutionInfoEventArgs" />
+</xs:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Sokoban.DataTypes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sokoban.DataTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSokobanObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SokobanObject" nillable="true" type="tns:SokobanObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSokobanObject" nillable="true" type="tns:ArrayOfSokobanObject" />
+  <xs:complexType name="SokobanObject">
+    <xs:sequence>
+      <xs:element name="Position" nillable="true" type="tns:PositionIndex" />
+      <xs:element name="SolutionPath" nillable="true" type="tns:Path" />
+      <xs:element name="TrackPath" nillable="true" type="tns:Path" />
+      <xs:element name="TrackType" type="tns:UnitType" />
+      <xs:element name="Type" type="tns:UnitType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SokobanObject" nillable="true" type="tns:SokobanObject" />
+  <xs:complexType name="PositionIndex">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="yIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PositionIndex" nillable="true" type="tns:PositionIndex" />
+  <xs:complexType name="Path">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Directions" nillable="true" type="tns:ArrayOfDirection" />
+      <xs:element minOccurs="0" name="valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Path" nillable="true" type="tns:Path" />
+  <xs:complexType name="ArrayOfDirection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Direction" type="tns:Direction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDirection" nillable="true" type="tns:ArrayOfDirection" />
+  <xs:simpleType name="Direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Up" />
+      <xs:enumeration value="Down" />
+      <xs:enumeration value="Right" />
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="NotMovable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Direction" nillable="true" type="tns:Direction" />
+  <xs:simpleType name="UnitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Wall" />
+      <xs:enumeration value="Target" />
+      <xs:enumeration value="Box" />
+      <xs:enumeration value="BoxOnTarget" />
+      <xs:enumeration value="Carrier" />
+      <xs:enumeration value="CarrierOnTarget" />
+      <xs:enumeration value="Floor" />
+      <xs:enumeration value="NotSupported" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UnitType" nillable="true" type="tns:UnitType" />
+</xs:schema>

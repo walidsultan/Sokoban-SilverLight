@@ -1,0 +1,30 @@
+﻿<UserControl xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"  x:Class="Sokoban.Controls.AuthenticationMode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+    <Grid x:Name="grdModalPopup">
+        <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.365" Fill="#FF8A8A8A"></Rectangle>
+
+        <Border x:Name="borderContent" CornerRadius="10" Width="600" Height="300" Opacity="1">
+            <Border.Background>
+                <ImageBrush ImageSource="../Images/MessageBox.png"  Stretch="Fill"  ></ImageBrush>
+            </Border.Background>
+            <Grid >
+                <Grid.RowDefinitions >
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <dataInput:Label x:Name="lblModalPopupTitle" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,0,0,50" FontSize="18" Foreground="White" ></dataInput:Label>
+                
+                <Button x:Uid="btnLogin" Click="Button_Login_Click" Content="Login" Grid.Row="1" Grid.Column="1" Width="100" Height="40"></Button>
+                <Button x:Uid="btnGuest" Click="Button_Guest_Click"  Content="Guest" Grid.Row="1" Grid.Column="2" Width="100" Height="40" ></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

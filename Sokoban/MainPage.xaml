@@ -1,0 +1,57 @@
+﻿<navigation:Page x:Class="Sokoban.MainPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:activity="clr-namespace:System.Windows.Controls;assembly=ActivityControl"
+                 mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+         d:DesignHeight="500" d:DesignWidth="625" SizeChanged="Page_SizeChanged">
+    <activity:Activity x:Name="activitySavingProgress"   ActiveContent="Saving..." >
+
+        <Grid x:Name="grdLayoutRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" ></RowDefinition>
+                <RowDefinition Height="4.5*"  ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="7.5*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/interface.png"></ImageBrush>
+            </Grid.Background>
+            <Canvas x:Name="mainCanvas" Background="White"  Grid.Row="1"  Grid.Column="1" Height="auto" Width="auto">
+
+            </Canvas>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  x:Name="tbLevelName" Grid.Column="0" Text="tbLevelName" VerticalAlignment="Center" FontSize="14" />
+                <TextBlock  x:Name="tbMoves" Grid.Column="1" Text="Moves: 0" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock  x:Name="tbPushes" Grid.Column="2" Text="Pushes: 0" VerticalAlignment="Center" FontSize="14"/>
+                <TextBlock  x:Name="tbTime" Grid.Column="3" Text="Time: 0" VerticalAlignment="Center"  FontSize="14"/>
+
+                <Canvas>
+                    <Canvas.Resources>
+                        <Storyboard x:Name="mainTimer">
+                            <DoubleAnimation Storyboard.TargetName="timerCanvas" 
+                       Storyboard.TargetProperty="(Canvas.Left)" 
+                       From="0" To="1"  
+                       Duration="0:0:1.0"
+                       Completed="timerMain_Completed"/>
+                        </Storyboard>
+                    </Canvas.Resources>
+                    <Canvas x:Name="timerCanvas" Opacity="0" />
+                </Canvas>
+            </Grid>
+        </Grid>
+    </activity:Activity>
+
+</navigation:Page>

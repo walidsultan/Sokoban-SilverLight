@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="5.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{924FA8CF-B348-442E-9244-0AD12FDEC47F}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sokoban</RootNamespace>
+    <AssemblyName>Sokoban</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Sokoban.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Sokoban.App</SilverlightAppEntry>
+    <TestPageFileName>SokobanTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\Sokoban.Web\Sokoban.Web.csproj</LinkedServerProject>
+    <TargetFrameworkProfile />
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BlockPath.cs" />
+    <Compile Include="Classes\BrowserScreenInformation.cs" />
+    <Compile Include="Classes\Direction.cs" />
+    <Compile Include="Classes\Path.cs" />
+    <Compile Include="Classes\Position.cs" />
+    <Compile Include="Classes\SokobanContext.cs" />
+    <Compile Include="Classes\Solution.cs" />
+    <Compile Include="Controls\AuthenticationMode.xaml.cs">
+      <DependentUpon>AuthenticationMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Box.xaml.cs">
+      <DependentUpon>Box.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConfirmEscape.xaml.cs">
+      <DependentUpon>ConfirmEscape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Floor.xaml.cs">
+      <DependentUpon>Floor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModalPopup.xaml.cs">
+      <DependentUpon>ModalPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player.xaml.cs">
+      <DependentUpon>Player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Target.xaml.cs">
+      <DependentUpon>Target.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\HistoryIncident.cs" />
+    <Compile Include="Classes\IBlockAnimation.cs" />
+    <Compile Include="Classes\IBlockPosition.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSwitcher.xaml.cs">
+      <DependentUpon>PageSwitcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\Wall.xaml.cs">
+      <DependentUpon>Wall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ranking.xaml.cs">
+      <DependentUpon>Ranking.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Controls\AuthenticationMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Box.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ConfirmEscape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Floor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ModalPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Target.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Wall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageSwitcher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ranking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\interface.png" />
+    <Resource Include="Images\green box.png" />
+    <Resource Include="Images\x.png" />
+    <Resource Include="Images\x2.png" />
+    <Resource Include="Images\messagebox.png" />
+    <Resource Include="Images\menu.png" />
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+    <Resource Include="Images\Ghost.png" />
+    <Content Include="Images\sokoban 128.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sokoban 16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sokoban 32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sokoban 42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sokoban.DataTypes.dll" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\WcfSokobanSolver\Solver.wsdl" />
+    <None Include="Service References\WcfSokobanSolver\Solver.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSokobanSolver\Solver1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSokobanSolver\Solver2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSokobanSolver\Solver3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSokobanSolver\Solver4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfSokobanSolver\Solver5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Wall.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Box.PNG" />
+    <Resource Include="Images\Player.PNG" />
+    <Resource Include="Images\Floor.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Target.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BoxOnTarget.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WcfSokobanSolver\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfSokobanSolver\Solver.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfSokobanSolver\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfSokobanSolver\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActivityControl\ActivityControl.csproj">
+      <Project>{27BDC194-49E3-4B46-B556-60E13C0C48AE}</Project>
+      <Name>ActivityControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

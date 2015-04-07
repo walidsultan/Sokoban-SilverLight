@@ -1,0 +1,51 @@
+﻿<controls:ChildWindow xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"  x:Class="Sokoban.LoginWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:activity="clr-namespace:System.Windows.Controls;assembly=ActivityControl"
+                      Width="500" Height="250" 
+           Title="LoginWindow">
+    <activity:Activity x:Name="activityAuthentication" >
+        
+        <Grid x:Name="LayoutRoot" Margin="2"  >
+
+            <Grid.Projection>
+                <PlaneProjection x:Name="planeProjectionSignUp">
+                </PlaneProjection>
+                </Grid.Projection>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".2*" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition x:Name="rowConfirmPassword" Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="8*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Username: " Grid.Row="1" Grid.Column="1" Width="200" Height="30" Margin="80,10,0,0" ></TextBlock>
+            <TextBlock Text="Password: " Grid.Row="2" Grid.Column="1" Width="200" Height="30" Margin="85,10,0,0"   ></TextBlock>
+            <TextBlock x:Name="tbConfirmPassword" Text="Confirm Password: " Grid.Row="3" Grid.Column="1" Width="200" Height="30" Margin="37,10,0,0"   ></TextBlock>
+
+            <TextBox x:Name="txtUsername" Grid.Row="1" Grid.Column="2" Width="200" Height="30" HorizontalAlignment="Left" ></TextBox>
+            <PasswordBox x:Name="txtPassword" Grid.Row="2" Grid.Column="2"  Width="200" Height="30" HorizontalAlignment="Left" ></PasswordBox>
+            <PasswordBox x:Name="txtConfirmPassword" Grid.Row="3" Grid.Column="2"  Width="200" Height="30" HorizontalAlignment="Left" ></PasswordBox>
+            <Button x:Name="btnCancel"  Click="btnCancel_Click" Content="Cancel" Grid.Row="4" Grid.Column="2" Width="50" Height="20" Margin="70,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  ></Button>
+            <Button x:Name="btnOk" Click="btnOk_Click" Content="Sign In" Grid.Row="4" Grid.Column="2" Width="50" Height="20" Margin="10,10,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" ></Button>
+            <HyperlinkButton x:Name="hlnkSignUp" Click="hlnkSignUp_Click" Content="Sign Up" Grid.Row="4" Grid.Column="0" VerticalAlignment="Bottom"  HorizontalAlignment="Left"  Grid.ColumnSpan ="2"></HyperlinkButton>
+            <dataInput:ValidationSummary x:Name="validationSummary" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom" ></dataInput:ValidationSummary>
+        </Grid>
+    </activity:Activity>
+    
+    <controls:ChildWindow.Resources >
+        <Storyboard x:Name="sbSignUp">
+            <DoubleAnimation Storyboard.TargetName="planeProjectionSignUp" Storyboard.TargetProperty="RotationY" From="0" To="360" Duration="0:0:1" >
+            </DoubleAnimation>
+        </Storyboard>
+    </controls:ChildWindow.Resources > 
+    
+</controls:ChildWindow>

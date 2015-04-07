@@ -1,0 +1,49 @@
+﻿<UserControl xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"  x:Class="Sokoban.Controls.ModalPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="grdModalPopup">
+        <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.365" Fill="#FF8A8A8A"></Rectangle>
+        
+        <Border x:Name="borderContent" CornerRadius="10" Width="600" Height="300" Opacity="1">
+            <Border.Background>
+                <ImageBrush ImageSource="../Images/MessageBox.png"  Stretch="Fill"  ></ImageBrush>
+            </Border.Background>
+            
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnClosePopup" Grid.Row="0"  Grid.Column="3" Width="32" Height="32" HorizontalAlignment="Right" Margin="0,0,20,50" Click="btnClosePopup_Click" MouseEnter="btnClosePopup_MouseEnter" MouseLeave="btnClosePopup_MouseLeave" Cursor="Hand" >
+                    <Button.Content>
+                        <Image x:Name="imgClosePopup" Source="../Images/x.png"></Image>
+                    </Button.Content>
+                </Button>
+                
+                <dataInput:Label x:Name="lblModalPopupTitle" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,0,0,50" FontSize="18" Foreground="White" ></dataInput:Label>
+                
+                <dataInput:Label x:Name="lblModalPopoupContent" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="60,0,0,0" FontSize="14" Foreground="Black"></dataInput:Label>
+
+                <TextBlock Name="tbContinue" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="160,20,0,0" FontSize="18" Foreground="Green" Text="Press enter to continue." >
+                    <TextBlock.Projection>
+                        <PlaneProjection x:Name="ppContinue" RotationX="45"></PlaneProjection>
+                    </TextBlock.Projection>
+                    
+                </TextBlock>
+            </Grid>
+        </Border>
+        
+        <Grid.Resources>
+            <Storyboard x:Name="sbContinue">
+                <DoubleAnimation Storyboard.TargetName="ppContinue" Storyboard.TargetProperty="RotationX" From="45" To="-45" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True" ></DoubleAnimation>
+            </Storyboard>
+        </Grid.Resources>
+    </Grid>
+</UserControl>
